@@ -1,12 +1,58 @@
 import { Link } from 'react-router-dom';
 import logo from '../../asset/Logo-backeraser.png';
 import footerLogo from '../../asset/Logo-Hitam.png';
+import gambar2 from '../assets/Gambar2.jpg';
 
-const AboutPage = () => {
-  const management = [
-    { name: "Nama Direktur Utama", role: "President Director", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200" },
-    { name: "Nama Direktur Operasional", role: "Operations Director", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" },
-    { name: "Nama Direktur Keuangan", role: "Finance Director", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200" },
+const NewsPage = () => {
+  const newsArticles = [
+    {
+      id: 1,
+      title: "PT Tanjung Sauh Power Raih Sertifikasi ISO 45001:2018",
+      excerpt: "Pencapaian significant dalam komitmen kami terhadap keselamatan kerja dan pengelolaan risiko occupational health & safety.",
+      date: "15 Januari 2026",
+      category: "Sertifikasi",
+      icon: "🏆"
+    },
+    {
+      id: 2,
+      title: "Operasional Unit Pembangkit Coal-Fired Capai Target Efisiensi 46%",
+      excerpt: "Melalui optimalisasi teknologi supercritical, kami mencapai milestone penting dalam efisiensi energi dan penghematan operasional.",
+      date: "10 Januari 2026",
+      category: "Operasional",
+      icon: "⚡"
+    },
+    {
+      id: 3,
+      title: "Program CSR: Pelatihan Keterampilan untuk 200 Pemuda Batam",
+      excerpt: "TSP berkomitmen mendukung pengembangan SDM lokal melalui program pelatihan teknis dan entrepreneur yang komprehensif.",
+      date: "5 Januari 2026",
+      category: "CSR",
+      icon: "🤝"
+    },
+    {
+      id: 4,
+      title: "Ekspansi Unit Renewable Energy: Panel Surya 5 MW Operasional",
+      excerpt: "Langkah konkret PT Tanjung Sauh Power dalam diversifikasi sumber energi terbarukan di Kepulauan Riau.",
+      date: "28 Desember 2025",
+      category: "Renewable Energy",
+      icon: "☀️"
+    },
+    {
+      id: 5,
+      title: "Partnership Strategis dengan Universitas Terkemuka untuk R&D Energi",
+      excerpt: "Kolaborasi mendalam dalam penelitian dan pengembangan teknologi pembangkit listrik masa depan yang lebih sustainable.",
+      date: "20 Desember 2025",
+      category: "Partnership",
+      icon: "🔬"
+    },
+    {
+      id: 6,
+      title: "Audit Lingkungan Eksternal: Compliance 100% ISO 14001:2015",
+      excerpt: "Hasil audit positif membuktikan dedikasi TSP dalam menjaga kelestarian ekosistem dan compliance terhadap regulasi lingkungan.",
+      date: "10 Desember 2025",
+      category: "ESG",
+      icon: "🌍"
+    }
   ];
 
   return (
@@ -29,67 +75,67 @@ const AboutPage = () => {
 
       {/* ========== BODY (MAIN CONTENT) ========== */}
       <main className="flex-grow">
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-              <div className="space-y-6">
-                <h2 className="text-electric-blue font-bold uppercase tracking-widest text-sm text-blue-600">Tentang Perusahaan</h2>
-                <h3 className="text-4xl font-extrabold text-deep-navy leading-tight text-blue-900">
-                  Pilar Energi untuk <br/> Kemajuan Bangsa
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-lg text-justify">
-                  PT Tanjung Sauh Power adalah perusahaan pembangkit listrik strategis yang berfokus pada penyediaan daya yang handal, aman, dan berkelanjutan. Berlokasi di wilayah pertumbuhan ekonomi Kepulauan Riau, kami berkomitmen mendukung program pemerintah dalam memperkuat infrastruktur kelistrikan nasional melalui inovasi teknologi dan manajemen operasional yang unggul.
-                </p>
-              </div>
-              <div className="bg-slate-100 h-64 lg:h-96 rounded-3xl overflow-hidden shadow-inner relative">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium italic p-8 text-center">
-                  [Visual: Foto Kantor Pusat atau Ilustrasi Infrastruktur Power Plant]
-                </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-24">
-              <div className="bg-blue-600 p-10 rounded-3xl text-white shadow-xl shadow-blue-200">
-                <h4 className="text-2xl font-bold mb-4 italic">Visi</h4>
-                <p className="text-blue-50 leading-relaxed text-lg">
-                  "Menjadi perusahaan penyedia energi terdepan di Indonesia yang mengedepankan efisiensi teknologi dan kelestarian lingkungan demi kesejahteraan masyarakat."
-                </p>
-              </div>
-              <div className="bg-white p-10 rounded-3xl border-2 border-slate-100 shadow-sm">
-                <h4 className="text-2xl font-bold text-deep-navy mb-4 italic text-blue-900">Misi</h4>
-                <ul className="space-y-4 text-gray-600">
-                  <li className="flex gap-3">
-                    <span className="text-electric-blue font-bold text-blue-600">01.</span>
-                    Membangun dan mengoperasikan pembangkit listrik dengan standar keamanan internasional (HSE).
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-electric-blue font-bold text-blue-600">02.</span>
-                    Menerapkan teknologi ramah lingkungan untuk meminimalisir jejak karbon operasional.
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-electric-blue font-bold text-blue-600">03.</span>
-                    Mendorong pertumbuhan ekonomi lokal melalui pemberdayaan tenaga kerja dan sinergi industri.
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-deep-navy mb-12 text-blue-900">Jajaran Manajemen</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
-                {management.map((person, index) => (
-                  <div key={index} className="group">
-                    <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-6 group-hover:border-electric-blue transition-all duration-300">
-                      <img src={person.image} alt={person.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0" />
-                    </div>
-                    <h4 className="text-xl font-bold text-deep-navy text-blue-900">{person.name}</h4>
-                    <p className="text-electric-blue font-medium text-sm text-blue-600">{person.role}</p>
-                  </div>
-                ))}
-              </div>
+        {/* Hero Section */}
+        <section 
+          className="relative text-white h-96 bg-cover bg-center overflow-hidden flex items-center justify-center"
+          style={{
+            backgroundImage: `url(${gambar2})`,
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-deep-navy/60"></div>
+          <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h1 className="text-5xl font-extrabold mb-4">Berita & Updates</h1>
+              <p className="text-xl text-blue-100">
+                Informasi terkini tentang perkembangan operasional, pencapaian, dan inisiatif PT Tanjung Sauh Power.
+              </p>
             </div>
           </div>
         </section>
+
+        {/* News Grid Section */}
+        <section className="py-24 bg-slate-50">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newsArticles.map((article) => (
+                <div 
+                  key={article.id} 
+                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col"
+                >
+                  {/* Article Header with Icon */}
+                  <div className="bg-gradient-to-r from-electric-blue to-blue-600 p-8 flex items-center justify-center h-32">
+                    <span className="text-6xl">{article.icon}</span>
+                  </div>
+
+                  {/* Article Content */}
+                  <div className="p-6 flex-grow flex flex-col">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="inline-block px-3 py-1 bg-blue-50 text-electric-blue text-xs font-bold uppercase rounded-full">
+                        {article.category}
+                      </span>
+                      <span className="text-xs text-gray-500">{article.date}</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-deep-navy mb-3 leading-tight flex-grow">
+                      {article.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                      {article.excerpt}
+                    </p>
+
+                    <button className="text-electric-blue font-bold text-sm hover:text-blue-700 transition flex items-center gap-2">
+                      Baca Selengkapnya →
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        
       </main>
 
       {/* ========== FOOTER ========== */}
@@ -160,4 +206,5 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+
+export default NewsPage;
