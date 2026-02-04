@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../asset/Logo-backeraser.png';
 import footerLogo from '../../asset/Logo-Hitam.png';
 import gambar2 from '../assets/Gambar2.jpg';
 
 const NewsPage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const newsArticles = [
     {
       id: 1,
@@ -59,17 +61,43 @@ const NewsPage = () => {
     <div className="min-h-screen flex flex-col font-sans antialiased text-gray-900">
       {/* ========== HEAD (NAVBAR) ========== */}
       <nav className="bg-white py-6 border-b border-gray-100 sticky top-0 z-50">
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-black text-deep-navy tracking-tighter">
-            <img src={logo} alt="Logo" className="h-10 w-auto object-contain" />
-          </Link>
-          <div className="hidden md:flex space-x-8 font-medium text-gray-600">
-            <Link to="/" className="hover:text-electric-blue transition">Home</Link>
-            <Link to="/about" className="hover:text-electric-blue transition">About</Link>
-            <Link to="/operations" className="hover:text-electric-blue transition">Operations</Link>
-            <Link to="/news" className="hover:text-electric-blue transition">News</Link>
-            <Link to="/contact" className="hover:text-electric-blue transition">Contact</Link>
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-center">
+            <Link to="/" className="text-2xl font-black text-deep-navy tracking-tighter">
+              <img src={logo} alt="Logo" className="h-10 w-auto object-contain" />
+            </Link>
+            <div className="hidden md:flex space-x-8 font-medium text-gray-600">
+              <Link to="/" className="hover:text-electric-blue transition">Home</Link>
+              <Link to="/about" className="hover:text-electric-blue transition">About</Link>
+              <Link to="/operations" className="hover:text-electric-blue transition">Operations</Link>
+              <Link to="/news" className="hover:text-electric-blue transition">News</Link>
+              <Link to="/contact" className="hover:text-electric-blue transition">Contact</Link>
+            </div>
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-deep-navy hover:text-electric-blue hover:bg-blue-50 transition"
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((open) => !open)}
+            >
+              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {isMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M3 6h18M3 12h18M3 18h18" />
+                )}
+              </svg>
+            </button>
           </div>
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 border-t border-gray-100 pt-4 space-y-3 font-medium text-gray-600">
+              <Link to="/" className="block hover:text-electric-blue transition" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link to="/about" className="block hover:text-electric-blue transition" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link to="/operations" className="block hover:text-electric-blue transition" onClick={() => setIsMenuOpen(false)}>Operations</Link>
+              <Link to="/news" className="block hover:text-electric-blue transition" onClick={() => setIsMenuOpen(false)}>News</Link>
+              <Link to="/contact" className="block hover:text-electric-blue transition" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            </div>
+          )}
         </div>
       </nav>
 
