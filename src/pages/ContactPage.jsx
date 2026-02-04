@@ -110,54 +110,66 @@ const ContactPage = () => {
               </div>
 
               {/* Lower Section: Maps & Double Address */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                {/* Bagian Maps (Diperkecil) */}
-                <div className="lg:col-span-1 h-[350px] rounded-[2rem] overflow-hidden shadow-lg border-4 border-white relative group">
-                  <iframe
-                    title="Google Maps Panbil Batam"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15956.123456789!2d104.037!3d1.082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9894e666a260d%3A0xdd0f769ebe216261!2sPanbil%20Industrial%20Estate!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="transition-opacity duration-300"
-                  ></iframe>
-                  
-                  {/* Overlay informasi jika map gagal load atau sekadar estetika */}
-                  <div className="absolute inset-0 bg-deep-navy/10 pointer-events-none group-hover:bg-transparent transition-colors"></div>
-                </div>
-
-                {/* Bagian Our Location (Samping Maps) */}
-                <div className="lg:col-span-2 bg-gray-50 p-8 rounded-[2.5rem] self-stretch flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="h-8 w-1 bg-electric-blue"></div>
-                    <h3 className="text-2xl font-bold text-deep-navy uppercase tracking-tight">Our Locations</h3>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-electric-blue font-bold text-sm">
-                        <span>01</span>
-                        <p className="uppercase">Site Office</p>
-                      </div>
-                      <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                        Pulau Tanjung Sauh, Batam, <br />Kepulauan Riau, Indonesia.
-                      </p>
-                    </div>
-
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-electric-blue font-bold text-sm">
-                        <span>02</span>
-                        <p className="uppercase">Corporate Office</p>
-                      </div>
-                      <p className="text-gray-600 text-sm leading-relaxed font-medium">
-                        Jl. Ahmad Yani, Muka Kuning, Kec. Sei Beduk, <br />Kota Batam, Kepulauan Riau 29433
-                      </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+                
+                {/* Map 1: Corporate Office (Panbil Plaza) */}
+                <div className="space-y-5">
+                  <div className="h-[350px] rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white relative group">
+                    <iframe
+                      title="Corporate Office - Panbil Plaza"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1032532729!2d104.0484766108139!3d1.083321562283437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98be2a588a4a7%3A0xabf44d1b3ee995a1!2sPanbil%20Plaza!5e0!3m2!1sid!2sid!4v1708800000000!5m2!1sid!2sid"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                    <div className="absolute top-4 right-4 bg-deep-navy text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                      CORPORATE OFFICE
                     </div>
                   </div>
+                  <div className="px-2">
+                    <h5 className="text-electric-blue font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px]">01</span>
+                      Batam Corporate Office
+                    </h5>
+                    <p className="text-gray-600 text-sm leading-relaxed font-medium">
+                      Panbil Plaza, Jl. Ahmad Yani, Muka Kuning, <br />
+                      Kec. Sei Beduk, Kota Batam, Kepulauan Riau 29433
+                    </p>
+                  </div>
                 </div>
+
+                {/* Map 2: Site Office (Pulau Tanjung Sauh) */}
+                <div className="space-y-5">
+                  <div className="h-[350px] rounded-[2.5rem] overflow-hidden shadow-xl border-4 border-white relative group">
+                    <iframe
+                      title="Site Office - Pulau Tanjung Sauh"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15956.123456789!2d104.162000!3d1.118000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98fc07865715d%3A0x34d86920e85c7478!2sPulau%20Tanjungsa!5e0!3m2!1sid!2sid!4v1708800000001!5m2!1sid!2sid"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                    <div className="absolute top-4 right-4 bg-electric-blue text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                      SITE OFFICE
+                    </div>
+                  </div>
+                  <div className="px-2">
+                    <h5 className="text-electric-blue font-bold text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+                      <span className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-[10px]">02</span>
+                      Tanjung Sauh Site Office
+                    </h5>
+                    <p className="text-gray-600 text-sm leading-relaxed font-medium">
+                      Kawasan Ekonomi Khusus (KEK) Tanjung Sauh, <br />
+                      Pulau Tanjung Sauh, Batam, Kepulauan Riau
+                    </p>
+                  </div>
+                </div>
+
               </div>
 
             </div>
